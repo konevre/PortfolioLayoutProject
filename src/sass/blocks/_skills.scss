@@ -1,0 +1,95 @@
+.skills {
+    padding: 120px 10px 0 10px;
+
+    &__title {
+        text-align: center;
+        position: relative;
+        @include before_circle;
+
+        &:before {
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__subtitle {
+        text-align: center;
+    }
+
+    &__wrapper {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        grid-auto-rows: minmax(270px, auto);
+        gap: 13px 13px;
+    }
+
+    &__item {
+        border: 1px solid #000000;
+        padding: 30px;
+        padding-top: 0;
+
+        &-logo {
+            height: 115px;
+            display: flex;
+            align-items: center;
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 21px;
+            color: #000;
+        }
+
+        &-descr {
+            font-size: 12px;
+            margin-top: 15px;
+            line-height: 18px;
+            color: #000;
+        }
+    }
+
+    &__barset {
+        margin-top: 130px;
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(2, 70px);
+        grid-auto-rows: 70px;
+        gap: 30px 45px;
+    }
+
+    &__bar {
+
+        &-title {
+            padding-left: 15px;
+            margin-bottom: 0;
+            position: relative;
+            @include before_circle;
+            &:before {
+                content: "";
+                top: -8px;
+            }
+        }
+
+        &-descr {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-range {
+            margin-top: 20px;
+            width: 100%;
+            background: #E8E4DE;
+            border-radius: 4px;
+            height: 14px;
+        }
+
+        &-covered {
+            height: 100%;
+            border-radius: 4px;
+            background: $main-color;
+        }
+    }
+}
